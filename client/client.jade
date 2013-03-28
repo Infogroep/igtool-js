@@ -1,0 +1,43 @@
+doctype 5
+html(lang="en")
+	head
+		block head
+			title IG4Tool
+			link(rel="stylesheet",href="/css/style.css")
+			link(rel="stylesheet",href="/css/sales.css")
+			link(rel="stylesheet",href="/css/producten.css")
+			link(rel="stylesheet",href="/css/automaat.css")
+			link(rel="stylesheet",href="/css/printing.css")
+			link(rel="stylesheet",href="/css/leden.css")
+			link(rel="stylesheet",href="/css/bibliotheek.css")
+
+			link(rel="stylesheet",href="/lib/bootstrap/css/bootstrap.css")
+			script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+			script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js")
+
+			script(src="/lib/jquery.dataTables.min.js")
+
+	body
+		#menu
+			.menu-item.btn(data-window="sales") Sales
+			.menu-item.btn(data-window="producten") Producten
+			.menu-item.btn(data-window="interne") Interne
+			.menu-item.btn(data-window="automaat") Automaat
+			.menu-item.btn(data-window="printing") Printing
+			.menu-item.btn(data-window="leden") Leden
+			.menu-item.btn(data-window="bibliotheek") Bibliotheek
+
+
+		#content
+			#sales.content-item
+				include windows/sales
+			
+		block endjs
+			script(src="/js/client.js")
+			script(src="/js/sales.js")
+			script(src="/js/producten.js")
+			script(src="/js/interne.js")
+			script(src="/js/automaat.js")
+			script(src="/js/printing.js")
+			script(src="/js/leden.js")
+			script(src="/js/bibliotheek.js")
