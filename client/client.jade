@@ -3,7 +3,15 @@ html(lang="en")
 	head
 		block head
 			title IG4Tool
-			link(rel="stylesheet",href="/css/style.css")
+
+			link(rel="stylesheet",href="/lib/bootstrap/css/bootstrap.css")
+			
+			script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+
+			script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js")
+			link(rel="stylesheet",href="/lib/themes/infogroep/jquery-ui-1.10.2.custom.min.css")
+
+			link(rel="stylesheet",href="/css/client.css")
 			link(rel="stylesheet",href="/css/sales.css")
 			link(rel="stylesheet",href="/css/producten.css")
 			link(rel="stylesheet",href="/css/automaat.css")
@@ -11,26 +19,58 @@ html(lang="en")
 			link(rel="stylesheet",href="/css/leden.css")
 			link(rel="stylesheet",href="/css/bibliotheek.css")
 
-			link(rel="stylesheet",href="/lib/bootstrap/css/bootstrap.css")
-			script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-			script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js")
-
-			script(src="/lib/jquery.dataTables.min.js")
-
 	body
-		#menu
-			.menu-item.btn(data-window="sales") Sales
-			.menu-item.btn(data-window="producten") Producten
-			.menu-item.btn(data-window="interne") Interne
-			.menu-item.btn(data-window="automaat") Automaat
-			.menu-item.btn(data-window="printing") Printing
-			.menu-item.btn(data-window="leden") Leden
-			.menu-item.btn(data-window="bibliotheek") Bibliotheek
-
-
-		#content
-			#sales.content-item
-				include windows/sales
+		#wrapper
+			#client
+				h3 IG4Tool
+				#windows
+					ul
+						li
+							a(href="#sales")
+								img(src="/img/sales.png")
+								span Sales
+						li
+							a(href="#producten")
+								img(src="/img/producten.png")
+								span Producten
+						li
+							a(href="#interne")
+								img(src="/img/interne.png")
+								span Interne
+						li
+							a(href="#leden")
+								img(src="/img/leden.png")
+								span Leden
+						li
+							a(href="#printing")
+								img(src="/img/printing.png")
+								span Printing
+						li
+							a(href="#bibliotheek")
+								img(src="/img/bibliotheek.png")
+								span Bibliotheek
+						li
+							a(href="#automaat")
+								img(src="/img/automaat.png")
+								span Automaat
+	
+					#sales
+						include windows/sales
+					#printing
+						include windows/printing
+					#automaat
+						include windows/automaat
+					#leden
+						include windows/leden
+					#producten
+						include windows/producten
+					#bibliotheek
+						include windows/bibliotheek
+					#interne
+						include windows/interne
+	
+				h3 Console
+				#console
 			
 		block endjs
 			script(src="/js/client.js")
