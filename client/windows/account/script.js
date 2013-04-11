@@ -1,0 +1,3 @@
+windows.account = {
+	title:'Interne'
+}

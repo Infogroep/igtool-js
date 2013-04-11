@@ -4,5 +4,5 @@ var config = require('./config');
 
 var app = connect()
 	.use(router)
-	.use(connect.static(__dirname+'/client/public'))
+	.use(connect.static(__dirname+'/client/'))
 	.listen(config.port);

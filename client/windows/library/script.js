@@ -1,0 +1,3 @@
+windows.library = {
+	title:'Bibliotheek'
+}

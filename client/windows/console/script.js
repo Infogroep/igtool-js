@@ -1,0 +1,3 @@
+windows.console = {
+	title:'Console'
+}

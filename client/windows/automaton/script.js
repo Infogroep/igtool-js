@@ -1,0 +1,3 @@
+windows.automaton = {
+	title:'Automaat'
+}
